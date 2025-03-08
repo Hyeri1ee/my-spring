@@ -5,6 +5,7 @@ import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.internal.MongoClientImpl;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,7 +13,8 @@ import org.springframework.context.annotation.Configuration;
 public class DatasourceConfig {
 
     // 커넥션 풀 크기를 변수로 저장
-    private static final int MAX_CONNECTION_POOL_SIZE = 10;
+    @Value("${spring.data.mongodb.connection-pool-size:10}")
+    private int maxConnectionPoolSize;
 
     @Bean
     public MongoClient mongoClient() {
@@ -21,7 +23,7 @@ public class DatasourceConfig {
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .applyToConnectionPoolSettings(builder ->
-                        builder.maxSize(MAX_CONNECTION_POOL_SIZE) // 커넥션 풀 크기 설정
+                        builder.maxSize(maxConnectionPoolSize) // 커넥션 풀 크기 설정
                 )
                 .build();
 
@@ -31,7 +33,7 @@ public class DatasourceConfig {
     @Bean
     public int mongoConnectionPoolSize() {
         // 커넥션 풀 크기를 반환
-        return MAX_CONNECTION_POOL_SIZE;
+        return maxConnectionPoolSize;
     }
 
     // 커넥션 풀의 상태를 반환하는 메서드

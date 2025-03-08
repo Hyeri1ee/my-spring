@@ -2,6 +2,7 @@ package hyeri.dbpool.tester;
 
 import hyeri.dbpool.tester.entity.TravelCand;
 import hyeri.dbpool.tester.repository.TravelCandRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
@@ -18,7 +19,7 @@ public class TravelCandService {
     private final TravelCandRepository travelCandRepository;
     private final int threadPoolSize;
 
-    public TravelCandService(TravelCandRepository travelCandRepository, int threadPoolSize) {
+    public TravelCandService(TravelCandRepository travelCandRepository, @Value("${spring.data.mongodb.connection-pool-size:10}") int threadPoolSize) {
         this.travelCandRepository = travelCandRepository;
         this.threadPoolSize = threadPoolSize;
     }
