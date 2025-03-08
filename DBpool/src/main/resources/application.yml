@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: mongo
+  data:
+    mongodb:
+      uri: mongodb+srv://root:1234@travel.mu8gr.mongodb.net/travel
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
