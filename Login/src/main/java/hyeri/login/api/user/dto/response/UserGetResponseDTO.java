@@ -1,4 +1,4 @@
-package hyeri.login.api.user.domain.dto.response;
+package hyeri.login.api.user.dto.response;
 
 import hyeri.login.api.user.domain.entity.User;
 import hyeri.login.api.user.enums.RoleName;
@@ -14,7 +14,7 @@ public record UserGetResponseDTO(long id, String userId, String password, String
                 .password(user.getLoginInfo().getPassword())
                 .name(user.getUserInfo().getName())
                 .tel(user.getUserInfo().getTel())
-                .roleName(user.getRoleInfo().getRoleName())
+                .roleName(user.getRoleInfo().getName().toString())
                 .build();
     }
 

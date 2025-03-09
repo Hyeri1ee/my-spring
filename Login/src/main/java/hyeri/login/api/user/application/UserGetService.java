@@ -1,5 +1,9 @@
 package hyeri.login.api.user.application;
 
+import hyeri.login.api.user.dto.response.UserGetResponseDTO;
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface UserGetService {
 
     /**

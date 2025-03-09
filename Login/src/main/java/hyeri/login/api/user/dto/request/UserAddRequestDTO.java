@@ -1,5 +1,6 @@
-package hyeri.login.api.user.domain.dto.request;
+package hyeri.login.api.user.dto.request;
 
+import hyeri.login.api.user.enums.RoleName;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

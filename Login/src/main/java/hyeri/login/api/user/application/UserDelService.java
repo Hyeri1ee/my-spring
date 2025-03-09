@@ -1,5 +1,8 @@
 package hyeri.login.api.user.application;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface UserDelService {
 
     /**
