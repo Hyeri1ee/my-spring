@@ -10,9 +10,14 @@
 * [데이터베이스 커넥션 풀 최적값을 찾아가는 여정(1/2)](https://im-not-robot-0.tistory.com/219)
 
 
+### Jwt
+
+jwt로그인/회원가입을 구현한 폴더입니다. 
+* 
+
 ### CommitmAuto
 
-커밋 suffix 자동화
+커밋 suffix 자동화를 구현한 폴더입니다.
 * []()
 
 <!--
@@ -21,9 +26,6 @@
 전화번호 정보만으로도 카카오톡 푸시 알림이 가능한지 확인 구현한 레포입니다.
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
-### Jwt
 
-jwt로그인/회원가입에 
-* 
 
 -->
