@@ -4,6 +4,6 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://root:1234@travel.mu8gr.mongodb.net/travel
-      connection-pool-size: 10
+      connection-pool-size: 1
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration

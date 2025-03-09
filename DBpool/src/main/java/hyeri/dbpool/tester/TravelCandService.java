@@ -19,7 +19,7 @@ public class TravelCandService {
     private final TravelCandRepository travelCandRepository;
     private final int threadPoolSize;
 
-    public TravelCandService(TravelCandRepository travelCandRepository, @Value("${spring.data.mongodb.connection-pool-size:10}") int threadPoolSize) {
+    public TravelCandService(TravelCandRepository travelCandRepository, @Value("${spring.data.mongodb.connection-pool-size:1}") int threadPoolSize) {
         this.travelCandRepository = travelCandRepository;
         this.threadPoolSize = threadPoolSize;
     }

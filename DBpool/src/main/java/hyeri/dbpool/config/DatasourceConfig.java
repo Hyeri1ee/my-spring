@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class DatasourceConfig {
 
     // 커넥션 풀 크기를 변수로 저장
-    @Value("${spring.data.mongodb.connection-pool-size:10}")
+    @Value("${spring.data.mongodb.connection-pool-size:1}")
     private int maxConnectionPoolSize;
 
     @Bean
