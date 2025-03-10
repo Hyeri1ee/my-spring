@@ -14,7 +14,7 @@ public record UserGetResponseDTO(long id, String userId, String password, String
                 .password(user.getLoginInfo().getPassword())
                 .name(user.getUserInfo().getName())
                 .tel(user.getUserInfo().getTel())
-                .roleName(user.getRoleInfo().getName().toString())
+                .roleName(user.getRoleInfo().getRoleName())
                 .build();
     }
 

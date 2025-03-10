@@ -1,5 +1,6 @@
 package hyeri.login.config.exception.user;
 
+import hyeri.login.api.user.exception.UserException;
 import hyeri.login.config.exception.common.ApiExceptionEntity;
 import jakarta.servlet.http.HttpServletRequest;
 import jdk.jshell.spi.ExecutionControl;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class UserApiExceptionAdvice {
 
     @ExceptionHandler({ExecutionControl.UserException.class})
-    public ResponseEntity<ApiExceptionEntity> exceptionHandler(HttpServletRequest req, final ExecutionControl.UserException e) {
+    public ResponseEntity<ApiExceptionEntity> exceptionHandler(HttpServletRequest req, final UserException e) {
         log.warn("[UserApiExceptionAdvice] UserException :: {}", e.getUserExceptionResult().getMessage());
 
         return ResponseEntity

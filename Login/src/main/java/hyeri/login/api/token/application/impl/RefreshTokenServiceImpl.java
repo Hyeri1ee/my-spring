@@ -5,6 +5,7 @@ import hyeri.login.api.token.dto.response.RefreshTokenResponseDTO;
 import hyeri.login.api.token.exception.RefreshTokenException;
 import hyeri.login.api.token.exception.RefreshTokenExceptionResult;
 import hyeri.login.api.token.vo.RefreshToken;
+import hyeri.login.config.security.provider.JwtProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

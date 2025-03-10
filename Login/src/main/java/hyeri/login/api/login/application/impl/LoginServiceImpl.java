@@ -5,6 +5,7 @@ import hyeri.login.api.login.dto.request.LoginRequestDTO;
 import hyeri.login.api.login.dto.response.LoginResponseDTO;
 import hyeri.login.api.login.exception.LoginException;
 import hyeri.login.api.login.exception.LoginExceptionResult;
+import hyeri.login.api.token.vo.RefreshToken;
 import hyeri.login.api.user.application.UserGetService;
 import hyeri.login.api.user.dto.response.UserGetResponseDTO;
 import hyeri.login.config.security.provider.JwtProvider;
@@ -23,6 +24,8 @@ public class LoginServiceImpl implements LoginService {
 
     private final JwtProvider jwtProvider;
 
+    private final RefreshToken refreshToken;
+
     @Override
     @Transactional
     public LoginResponseDTO login(final LoginRequestDTO loginRequestDTO) {
@@ -37,15 +40,15 @@ public class LoginServiceImpl implements LoginService {
         String accessToken = jwtProvider.generateAccessToken(userInfo.id());
 
         // 기존에 가지고 있는 사용자의 refresh token 제거
-        RefreshToken.removeUserRefreshToken(userInfo.id());
+        refreshToken.removeUserRefreshToken(userInfo.id());
 
         // refresh token 생성 후 저장
-        String refreshToken = jwtProvider.generateRefreshToken(userInfo.id());
-        RefreshToken.putRefreshToken(refreshToken, userInfo.id());
+        String refreshTokenNew = jwtProvider.generateRefreshToken(userInfo.id());
+        refreshToken.putRefreshToken(refreshTokenNew, userInfo.id());
 
         return LoginResponseDTO.builder()
                 .accessToken(accessToken)
-                .refreshToken(refreshToken)
+                .refreshToken(refreshTokenNew)
                 .build();
     }
 

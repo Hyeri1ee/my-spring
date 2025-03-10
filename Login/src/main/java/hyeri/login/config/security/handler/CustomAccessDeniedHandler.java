@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
+import hyeri.login.config.exception.common.enums.ApiExceptionEnum;
+import com.google.gson.JsonObject;
 
 import java.io.IOException;
 import java.io.PrintWriter;

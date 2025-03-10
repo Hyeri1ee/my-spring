@@ -1,6 +1,7 @@
 package hyeri.login.api.user.domain.entity;
 
 import hyeri.login.api.common.entity.RegModDt;
+import hyeri.login.api.user.domain.entity.value.RoleInfo;
 import hyeri.login.api.user.dto.request.UserAddRequestDTO;
 import hyeri.login.api.user.domain.entity.value.LoginInfo;
 import hyeri.login.api.user.domain.entity.value.UserInfo;
@@ -8,7 +9,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
-import javax.management.relation.RoleInfo;
 
 @Entity
 @Getter

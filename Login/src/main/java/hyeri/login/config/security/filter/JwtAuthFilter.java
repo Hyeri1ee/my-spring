@@ -1,6 +1,7 @@
 package hyeri.login.config.security.filter;
 
 import hyeri.login.api.user.application.UserGetService;
+import hyeri.login.config.security.provider.JwtProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
