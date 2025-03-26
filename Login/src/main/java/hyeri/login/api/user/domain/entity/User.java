@@ -5,10 +5,14 @@ import hyeri.login.api.user.domain.entity.value.RoleInfo;
 import hyeri.login.api.user.dto.request.UserAddRequestDTO;
 import hyeri.login.api.user.domain.entity.value.LoginInfo;
 import hyeri.login.api.user.domain.entity.value.UserInfo;
+import hyeri.login.util.jwt.RSAUtill;
+import hyeri.login.util.jwt.dto.RSAkeys;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
+
+import java.security.NoSuchAlgorithmException;
 
 @Entity
 @Getter
@@ -33,6 +37,9 @@ public class User extends RegModDt {
     private UserInfo userInfo;
 
     private boolean delYn = Boolean.FALSE; // 삭제 여부 기본값 false
+
+    @Column(length = 2048)
+    private String RSApublickey;//개인 공개키
 
     /**
      * UserAddRequestDTO to User Entity
@@ -63,6 +70,12 @@ public class User extends RegModDt {
                 .userInfo(inputUserInfo)
                 .roleInfo(inputRoleInfo)
                 .build();
+    }
+
+    public String makeRSA() throws NoSuchAlgorithmException {
+        RSAkeys rsAkeys = RSAUtill.generateRsaKeyPair();
+        this.RSApublickey = rsAkeys.publickey();
+        return rsAkeys.privatekey();
     }
 
 }

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.NoSuchAlgorithmException;
+
 @RestController
 @RequiredArgsConstructor
 public class RegisterController {
@@ -17,11 +19,11 @@ public class RegisterController {
     private final UserAddService userAddService;
 
     @PostMapping("/register")
-    public ResponseEntity<ApiResponseEntity> register(@RequestBody @Valid UserAddRequestDTO userAddRequestDTO) {
+    public ResponseEntity<ApiResponseEntity> register(@RequestBody @Valid UserAddRequestDTO userAddRequestDTO) throws NoSuchAlgorithmException {
         // 사용자 정보 저장
-        userAddService.addUser(userAddRequestDTO);
+        String privatekey = userAddService.addUser(userAddRequestDTO);
 
-        return ApiResponseEntity.successResponseEntity();
+        return ApiResponseEntity.successResponseEntity(privatekey);
     }
 
 }

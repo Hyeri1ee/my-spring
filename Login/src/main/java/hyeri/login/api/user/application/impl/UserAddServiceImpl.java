@@ -9,6 +9,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.security.NoSuchAlgorithmException;
+
 @RequiredArgsConstructor
 @Service
 public class UserAddServiceImpl implements UserAddService {
@@ -24,14 +26,19 @@ public class UserAddServiceImpl implements UserAddService {
      */
     @Override
     @Transactional
-    public void addUser(final UserAddRequestDTO userAddRequestDTO) {
+    public String addUser(final UserAddRequestDTO userAddRequestDTO) throws NoSuchAlgorithmException {
         // User DTO to Entity
         User user = User.of(userAddRequestDTO);
 
         // password 암호화
         user.getLoginInfo().encryptPassword(bCryptPasswordEncoder);
 
+        //RSA 키 쌍
+        String privateKey = user.makeRSA();
+
         // save
         userRepository.save(user);
+
+        return privateKey;
     }
 }
