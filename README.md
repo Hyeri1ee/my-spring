@@ -1,6 +1,6 @@
 # My Spring
 
-### spring에서 단순 궁금한 점들을 개인적으로 공부하며 정리한 레포입니다.
+### cs 및 spring 에서 단순 궁금한 점들을 개인적으로 공부하며 정리한 레포입니다.
 
 
 
@@ -16,5 +16,6 @@ jwt 로그인/회원가입을 구현한 폴더입니다. <!-- RTR시 백엔드�
 * [스프링이 클라이언트의 요청을 처리하는 전체적인 로직](https://im-not-robot-0.tistory.com/221)
 * [spring security jwt 인증/인가](https://im-not-robot-0.tistory.com/222)
    
-   ---
-* [suffix 커밋 자동화]()
+### os
+
+* [page교체 알고리즘 중 FIFO의 Belady 이상현상 고찰](https://im-not-robot-0.tistory.com/230)
