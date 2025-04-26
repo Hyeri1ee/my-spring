@@ -27,7 +27,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "jvmbook",
+    "git-widget-placeholder": "aws",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/hyerimac/Desktop/dev/실험/my-spring/AWS로 시작하는 인프라 구축의 정석",
     "node.js.detected.package.eslint": "true",
@@ -54,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745669445906</updated>
-      <workItem from="1745669447521" duration="2642000" />
+      <workItem from="1745669447521" duration="2782000" />
     </task>
     <servers />
   </component>
