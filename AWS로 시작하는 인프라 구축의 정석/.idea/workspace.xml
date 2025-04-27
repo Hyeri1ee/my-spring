@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b64339b5-2d29-4991-afbd-f57f4f7a652b" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter3/3.1,3.2,3.3.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/4.1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter4/4.1.md" beforeDir="false" afterPath="$PROJECT_DIR$/chapter4/4.1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/img_4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/4.1.md" beforeDir="false" afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/4.1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/ip.md" beforeDir="false" afterPath="$PROJECT_DIR$/../AWS로 시작하는 인프라 구축의 정석/chapter4/ip.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745669445906</updated>
-      <workItem from="1745669447521" duration="6099000" />
+      <workItem from="1745669447521" duration="16404000" />
     </task>
     <servers />
   </component>
