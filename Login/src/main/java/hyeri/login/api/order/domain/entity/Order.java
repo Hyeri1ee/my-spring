@@ -16,7 +16,7 @@ public class Order extends RegModDt {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userid;//k-1로 암호화된 값
+    private String userid;//k-1로 암호화된 값 // k = 4 (4 5 12 100)
 
     private String itemname;
 
