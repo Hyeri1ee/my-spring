@@ -1,8 +1,10 @@
 # My Spring
 
-### cs 및 spring 에서 단순 궁금한 점들을 개인적으로 공부하며 정리한 레포입니다.
+### 개인적으로 공부하며 정리한 레포입니다.
 
-
+### Infra
+Bastion 서버, nginx의 로드밸런서 k6로 부하 테스트
+* [[인프라/AWS] NAT Gateway 대신 NAT Instance사용 / Nginx의 로드밸런서](https://im-not-robot-0.tistory.com/232)
 
 ### DBpool
 
